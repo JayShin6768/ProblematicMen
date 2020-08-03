@@ -20,8 +20,18 @@ a {
    text-decoration: none;
 }
 
-a:hover {
-   text-decoration: underline;
+input {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   border: none;
+   color: white;
+   font-size: 1.6rem;
+}
+
+input:focus {
+   outline: none;
 }
 
 /* 헤더 */
@@ -57,20 +67,25 @@ header {
    align-items: center;
 }
 
-.nav-searchbox { /* 추후 input 수정 */
+
+input#nav-searchbox{ 
    width: 500px; /* 추후 반응형으로 수정 */
    height: 3rem;
    max-width: 500px;
    padding: 2px 6px;
-   outline: 1px solid #303030;
+   border: 1px solid #303030;
    color: #6f6f6f;
    background-color: black;
 }
 
-.nav-searchbtn {
+input#nav-searchbox:focus {
+   border: 1px solid #1c62b9;
+}
+
+#nav-searchbtn {
    width: 65px;
    height: 3rem;
-   outline: 1px solid #303030;
+   border: 1px solid #303030;
    background-color: #303030;
    display: flex;
    justify-content: center;
@@ -78,9 +93,42 @@ header {
    color: #6f6f6f;
 }
 
+#nav-searchbtn:hover {
+   color: #A4A4A4;
+   cursor: pointer;
+}
+
+.nav-right {
+   display: flex;
+   align-items: center;
+   margin: 2rem 3rem;
+   font-size: 1.4rem;
+}
+
+.nav-login {
+   padding: 8px 10px;
+   border: 1px solid #3ea6ff;
+   cursor: pointer;
+}
+
+.nav-login .fa-user {
+   font-size: 2rem;
+   color: #3ea6ff;
+}
+
+.nav-login span {
+   margin-left: 8px;
+   color: #3ea6ff;
+}
+
 
 /* 컨텐츠 */
 .container {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   height: 1000px;
+   color: white;
    background-color: #181818;
 }
 
